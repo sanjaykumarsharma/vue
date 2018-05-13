@@ -1,0 +1,67 @@
+// Fonts
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,600");
+// Variables
+@import "variables";
+// Bootstrap
+@import "~bootstrap-sass/assets/stylesheets/bootstrap";
+.thumbnail {
+    border: none !important;
+    background-color: #fbfdff !important;
+}
+
+.description {
+    font-size: 20px;
+}
+
+.description a {
+    text-decoration: none;
+    color: #000000;
+}
+
+.description a:hover {
+    color: #FF0000;
+}
+
+a {
+    text-decoration: none !important;
+}
+
+.tags {
+    background-color: #eee;
+    padding: 5px;
+    font-size: 12px;
+    display: inline-block;
+    margin-bottom: 2px;
+}
+
+.read-more {
+    float: right;
+    background: #e74c3c;
+    color: #fff;
+}
+
+.feed-img {
+    max-width: 100px;
+}
+
+.title {
+    font-size: 17px;
+    font-weight: 600;
+    color: #1f1e1e;
+}
+
+.boby-pd {
+    padding-left: 50px
+}
+
+footer {
+    background: #3f4246;
+    height: 50px;
+    color: #fff;
+    font-weight: bold;
+}
+
+.footer {
+    padding-top: 16px;
+    text-align: center;
+}
