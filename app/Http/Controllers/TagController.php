@@ -43,4 +43,9 @@ class TagController extends Controller
             return view('tag' , ['feeds'=>$feeds]);
         }
     }
+
+    public function categoryPage($category)
+    {
+        dd($category);
+    }
 }

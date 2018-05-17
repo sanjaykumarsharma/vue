@@ -11,25 +11,36 @@
         <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     </head>
     <body>
-        <header>
+        {{-- <header>
             <div class="container-fluid" style="padding-top:5px;background-color:#FFF">
                 <div class="row">
                     <h2 style="padding-left: 20px;"><a href="/">theBIGnews</a></h2>
 
                 </div>
             </div>
-        </header>
+        </header> --}}
 
-        <div class="container-fluid" style="padding-top:20px;background-color:#FFF">
+        @include('layouts.header')
+
+        <div class="container-fluid" style="background-color:#FFF">
             @section('content')
 
             @show
         </div>
         <footer>
-            <div class="row footer">
-                <div class="col-md-12">Copyright 2018</div>
+            <div class="container-fluid">
+                <div class="row footer">
+                    <div class="col-md-12">Copyright 2018</div>
+                </div>
             </div>
         </footer>
 
     </body>
+    <!-- Main jQuery-->
+{{-- <script src="https://www.skazee.com/resp/mmenu/tt/jquery.js"></script> --}}
+<!-- Bootstrap -->
+    {{-- <script src="https://www.skazee.com/resp/mmenu/tt/bootstrap.min.js"></script> --}}
+<!-- TT Menu -->
+    {{-- <script src="https://www.skazee.com/resp/mmenu/tt/ttmenu.js"></script> --}}
+    <script src="{{ asset('js/app.js') }}"></script>
 </html>

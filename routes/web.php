@@ -16,3 +16,4 @@ Route::get('/', 'PostController@index');
 Route::get('/store', 'PostController@store');
 Route::get('/{slug}', 'PostController@details');
 Route::get('/tag/{category}', 'TagController@index');
+Route::get('/{category}', 'TagController@categoryPage');
