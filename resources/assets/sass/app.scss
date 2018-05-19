@@ -34,6 +34,14 @@ a {
     margin-bottom: 2px;
 }
 
+.menu-tags {
+    background-color: #eee;
+    padding: 5px;
+    font-size: 12px;
+    display: inline-block;
+    margin-bottom: 2px;
+}
+
 .read-more {
     float: right;
     background: #e74c3c;
@@ -246,7 +254,7 @@ footer {
 }
 
 .navbar-default .dropdown-menu li a {
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    //border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     color: #282828;
     font-size: 13px;
     font-weight: 400;

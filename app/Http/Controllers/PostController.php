@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Post;
+use App\Tag;
 
 use Feeds;
 use SEOMeta;
@@ -110,6 +111,21 @@ class PostController extends Controller
     }
 
     public function createFeed($items,$tag){
+        $t=Post::all()->pluck('category')->toArray();
+        foreach($t as $k){
+             $a=explode(',',$k);
+             foreach($a as $v){
+                $tag_in_tags_table = Tag::where('tag', '=', trim($v))->first();
+                        if($tag_in_tags_table === null){//check if tag is not there
+                            Tag::create([
+                                 'tag' => trim($v)
+                             ]);
+                        }
+             }
+        }
+
+        dd('ok');
+
         foreach($items as $item){
             $slug = explode("/",$item->get_permalink());
 
@@ -151,10 +167,18 @@ class PostController extends Controller
                     foreach ($item->get_categories() as $c)
                     {
                         if($feed_category==''){
-                            $feed_category = $c->get_label();
+                            $feed_category = trim($c->get_label());
                         }else{
-                            $feed_category = $feed_category .','. $c->get_label();
+                            $feed_category = $feed_category .','. trim($c->get_label());
                         }
+
+                        $tag_in_tags_table = Tag::where('tag', '=', trim($c->get_label()))->first();
+                        if($tag_in_tags_table === null){//check if tag is not there
+                            Tag::create([
+                                 'tag' => trim($c->get_label())
+                             ]);
+                        }
+
                     }
                 }
                 //$item->get_date();
@@ -165,8 +189,12 @@ class PostController extends Controller
                     $img_link = $item->get_enclosure()->get_link();
                 }else{
                     preg_match('/<img.+src=[\'"](?P<src>.+?)[\'"].*>/i', $item->get_content(), $image);
-                    if (strpos($image['src'], 'www.') !== false || strpos($image['src'], 'http')!== false) {
-                        $img_link = $image['src'];
+                    if(isset($image['src'])){
+                        if (strpos($image['src'], 'www.') !== false || strpos($image['src'], 'http')!== false) {
+                            $img_link = $image['src'];
+                        }else{
+                            $img_link = '';
+                        }
                     }else{
                         $img_link = '';
                     }
@@ -188,6 +216,11 @@ class PostController extends Controller
 
         }
         echo 'feeds are updated: '. $tag. '<br>';
+
+
+        //code for adding missing tags
+
+
     }
 
 
