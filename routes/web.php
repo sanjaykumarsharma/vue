@@ -12,8 +12,12 @@
 Route::get('/vue', function () {
     return view('welcome');
 });
+
 Route::get('/', 'PostController@index');
 Route::get('/store', 'PostController@store');
 Route::get('/{slug}', 'PostController@details');
+
 Route::get('/tag/{category}', 'TagController@index');
+Route::get('/category/{category}', 'TagController@category');
+Route::get('/tags/all', 'TagController@tagsPage');
 Route::get('/{category}', 'TagController@categoryPage');

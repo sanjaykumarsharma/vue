@@ -18,12 +18,12 @@ class PostController extends Controller
 {
     public function index()
     {
-        SEOMeta::setTitle('Home | The Big News');
+        SEOMeta::setTitle('The Big News');
         SEOMeta::setDescription('This is my page description');
         SEOMeta::setCanonical('www.thebignews.info');
 
         OpenGraph::setDescription('This is my page description');
-        OpenGraph::setTitle('Home|The Big News');
+        OpenGraph::setTitle('The Big News');
         OpenGraph::setUrl('www.thebignews.info');
         OpenGraph::addProperty('type', 'articles');
 
@@ -111,20 +111,20 @@ class PostController extends Controller
     }
 
     public function createFeed($items,$tag){
-        $t=Post::all()->pluck('category')->toArray();
-        foreach($t as $k){
-             $a=explode(',',$k);
-             foreach($a as $v){
-                $tag_in_tags_table = Tag::where('tag', '=', trim($v))->first();
-                        if($tag_in_tags_table === null){//check if tag is not there
-                            Tag::create([
-                                 'tag' => trim($v)
-                             ]);
-                        }
-             }
-        }
+        // $t=Post::all()->pluck('category')->toArray();
+        // foreach($t as $k){
+        //      $a=explode(',',$k);
+        //      foreach($a as $v){
+        //         $tag_in_tags_table = Tag::where('tag', '=', trim($v))->first();
+        //                 if($tag_in_tags_table === null){//check if tag is not there
+        //                     Tag::create([
+        //                          'tag' => trim($v)
+        //                      ]);
+        //                 }
+        //      }
+        // }
 
-        dd('ok');
+        // dd('ok');
 
         foreach($items as $item){
             $slug = explode("/",$item->get_permalink());

@@ -36,12 +36,10 @@
             </div>
         </footer>
 
+        <script src="{{ asset('js/app.js') }}"></script>
+        <script src="{{ asset('js/jquery-listnav.js') }}"></script>
+        <script>
+            $("#myTags").listnav();
+        </script>
     </body>
-    <!-- Main jQuery-->
-{{-- <script src="https://www.skazee.com/resp/mmenu/tt/jquery.js"></script> --}}
-<!-- Bootstrap -->
-    {{-- <script src="https://www.skazee.com/resp/mmenu/tt/bootstrap.min.js"></script> --}}
-<!-- TT Menu -->
-    {{-- <script src="https://www.skazee.com/resp/mmenu/tt/ttmenu.js"></script> --}}
-    <script src="{{ asset('js/app.js') }}"></script>
 </html>
