@@ -21,3 +21,6 @@ Route::get('/tag/{category}', 'TagController@index');
 Route::get('/category/{category}', 'TagController@category');
 Route::get('/tags/all', 'TagController@tagsPage');
 Route::get('/{category}', 'TagController@categoryPage');
+
+Route::get('/contact/help-desk', 'PagesController@contact');
+Route::post('/contact/help-desk', 'PagesController@postContact');

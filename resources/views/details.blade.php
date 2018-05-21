@@ -3,7 +3,7 @@
 @section('content')
 
     <div class="row">
-        <img src="images/thebignews.jpg" alt="thebignews" class="img-responsive">
+        <img src="{{ asset('images/thebignews.jpg') }}" alt="thebignews" class="img-responsive">
     </div>
 
     <div class="row">
