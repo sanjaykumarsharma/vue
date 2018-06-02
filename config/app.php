@@ -164,6 +164,7 @@ return [
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
         App\Providers\ComposerServiceProvider::class,
+        Barryvdh\Debugbar\ServiceProvider::class,
 
         /*
          * Package Service Providers...
@@ -235,6 +236,7 @@ return [
         'Twitter'   => Artesaos\SEOTools\Facades\TwitterCard::class,
         // or
         'SEO' => Artesaos\SEOTools\Facades\SEOTools::class,
+        'Debugbar' => Barryvdh\Debugbar\Facade::class,
 
     ],
 

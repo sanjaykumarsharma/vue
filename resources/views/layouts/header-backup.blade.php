@@ -64,7 +64,7 @@
                                                                     </div><!-- end box -->
                                                                 </div><!-- end col -->
                                                                 <div class="col-md-4 col-sm-6 col-xs-12">
-                                                                    {{-- <img src="images/darkmenubg.png" alt="" class="img-responsive"> --}}
+                                                                    {{-- <img src="images/darkmenubg.png" alt="" class="img-fluid"> --}}
                                                                 </div><!-- end col -->
                                                             </div><!-- end row -->
                                                         </div>
@@ -74,7 +74,7 @@
                                                                     <div class="widget clearfix">
                                                                         <a href="#">
                                                                         <div class="entry">
-                                                                            {{-- <img src="images/menu_mini_01.png" alt="" class="img-responsive"> --}}
+                                                                            {{-- <img src="images/menu_mini_01.png" alt="" class="img-fluid"> --}}
                                                                             <span class="magnifier"></span>
                                                                         </div><!-- enntry -->
                                                                         </a>
@@ -84,7 +84,7 @@
                                                                     <div class="widget clearfix">
                                                                         <a href="#">
                                                                         <div class="entry">
-                                                                            {{-- <img src="images/menu_mini_02.png" alt="" class="img-responsive"> --}}
+                                                                            {{-- <img src="images/menu_mini_02.png" alt="" class="img-fluid"> --}}
                                                                             <span class="magnifier"></span>
                                                                         </div><!-- enntry -->
                                                                         </a>
@@ -94,7 +94,7 @@
                                                                     <div class="widget clearfix">
                                                                         <a href="#">
                                                                         <div class="entry">
-                                                                            {{-- <img src="images/menu_mini_03.png" alt="" class="img-responsive"> --}}
+                                                                            {{-- <img src="images/menu_mini_03.png" alt="" class="img-fluid"> --}}
                                                                             <span class="magnifier"></span>
                                                                         </div><!-- enntry -->
                                                                         </a>
@@ -104,7 +104,7 @@
                                                                     <div class="widget clearfix">
                                                                         <a href="#">
                                                                         <div class="entry">
-                                                                            {{-- <img src="images/menu_mini_04.png" alt="" class="img-responsive"> --}}
+                                                                            {{-- <img src="images/menu_mini_04.png" alt="" class="img-fluid"> --}}
                                                                             <span class="magnifier"></span>
                                                                         </div><!-- enntry -->
                                                                         </a>
@@ -114,7 +114,7 @@
                                                                     <div class="widget clearfix">
                                                                         <a href="#">
                                                                         <div class="entry">
-                                                                            {{-- <img src="images/menu_mini_05.png" alt="" class="img-responsive"> --}}
+                                                                            {{-- <img src="images/menu_mini_05.png" alt="" class="img-fluid"> --}}
                                                                             <span class="magnifier"></span>
                                                                         </div><!-- enntry -->
                                                                         </a>
@@ -124,7 +124,7 @@
                                                                     <div class="widget clearfix">
                                                                         <a href="#">
                                                                         <div class="entry">
-                                                                            {{-- <img src="images/menu_mini_06.png" alt="" class="img-responsive"> --}}
+                                                                            {{-- <img src="images/menu_mini_06.png" alt="" class="img-fluid"> --}}
                                                                             <span class="magnifier"></span>
                                                                         </div><!-- enntry -->
                                                                         </a>
@@ -146,10 +146,10 @@
                                                                     <div id="myCarousel" class="carousel slide" data-ride="carousel">
                                                                         <div class="carousel-inner">
                                                                             <div class="item active">
-                                                                                {{-- <a href="single-project.html"><img src="images/menu_01.png" class="img-responsive" alt=""></a> --}}
+                                                                                {{-- <a href="single-project.html"><img src="images/menu_01.png" class="img-fluid" alt=""></a> --}}
                                                                             </div><!-- End Item -->
                                                                             <div class="item">
-                                                                                {{-- <a href="single-project.html"><img src="images/menu_02.png" class="img-responsive" alt=""></a> --}}
+                                                                                {{-- <a href="single-project.html"><img src="images/menu_02.png" class="img-fluid" alt=""></a> --}}
                                                                             </div><!-- End Item -->
                                                                         </div><!-- End Carousel Inner -->
                                                                     </div><!-- /.carousel -->

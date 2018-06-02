@@ -41,12 +41,12 @@ class PostController extends Controller
         if ($feed != null) {
 
             SEOMeta::setTitle($feed->title);
-            SEOMeta::setDescription($feed->description);
+            SEOMeta::setDescription(substr($feed->description,0,300));
             SEOMeta::addMeta('article:published_time', $feed->pub_date, 'property');
             SEOMeta::addMeta('article:section', $feed->slug, 'property');
             //SEOMeta::addKeyword(['key1', 'key2', 'key3']);
 
-            OpenGraph::setDescription($feed->description);
+            OpenGraph::setDescription(substr($feed->description,0,300));
             OpenGraph::setTitle($feed->title);
             OpenGraph::setUrl('http://thebignews.info');
             OpenGraph::addProperty('type', 'article');
@@ -187,11 +187,31 @@ class PostController extends Controller
                 if ($item->get_enclosure()->get_link())
                 {
                     $img_link = $item->get_enclosure()->get_link();
+
+                    // preg_match('/<img.+src=[\'"](?P<src>.+?)[\'"].*>/i', $item->get_enclosure()->get_link(), $image);
+                    // if(isset($image['src'])){
+                    //     if (strpos($image['src'], 'www.') !== false || strpos($image['src'], 'http')!== false) {
+                    //         if (strpos($image['src'], '.jpeg')!== false || strpos($image['src'], '.jpg')!== false || strpos($image['src'], '.gif')!== false || strpos($image['src'], '.png')!== false) {
+                    //             $img_link = $image['src'];
+                    //         }else{
+                    //             $img_link = '';
+                    //         }
+                    //     }else{
+                    //         $img_link = '';
+                    //     }
+                    // }else{
+                    //     $img_link = '';
+                    // }
+
                 }else{
                     preg_match('/<img.+src=[\'"](?P<src>.+?)[\'"].*>/i', $item->get_content(), $image);
                     if(isset($image['src'])){
                         if (strpos($image['src'], 'www.') !== false || strpos($image['src'], 'http')!== false) {
-                            $img_link = $image['src'];
+                            if (strpos($image['src'], '.jpeg')!== false || strpos($image['src'], '.jpg')!== false || strpos($image['src'], '.gif')!== false || strpos($image['src'], '.png')!== false) {
+                                $img_link = $image['src'];
+                            }else{
+                                $img_link = '';
+                            }
                         }else{
                             $img_link = '';
                         }

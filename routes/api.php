@@ -17,17 +17,17 @@ use Illuminate\Http\Request;
 //     Route::resource('companies', 'CompaniesController', ['except' => ['create', 'edit']]);
 // });
 
-Route::group(['middleware'=>'api'],function(){
-     Route::get('contact', 'ContactController@index');
-     Route::post('contact/store', 'ContactController@store');
-     Route::patch('contact/{id}', 'ContactController@update');
-     Route::delete('contact/{id}', 'ContactController@destroy');
+//Route::group(['middleware'=>'api'],function(){
+     //Route::get('contact', 'ContactController@index');
+     //Route::post('contact/store', 'ContactController@store');
+     //Route::patch('contact/{id}', 'ContactController@update');
+     //Route::delete('contact/{id}', 'ContactController@destroy');
     // Route::resource('contact', 'ContactController');
-});
+//});
 
 
 
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
-});
+// Route::middleware('auth:api')->get('/user', function (Request $request) {
+//     return $request->user();
+// });

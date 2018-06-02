@@ -9,9 +9,9 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/vue', function () {
-    return view('welcome');
-});
+// Route::get('/vue', function () {
+//     return view('welcome');
+// });
 
 Route::get('/', 'PostController@index');
 Route::get('/store', 'PostController@store');
