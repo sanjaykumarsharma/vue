@@ -12,6 +12,7 @@
 // Route::get('/vue', function () {
 //     return view('welcome');
 // });
+Auth::routes();
 
 Route::get('/', 'PostController@index');
 Route::get('/store', 'PostController@store');
@@ -24,3 +25,10 @@ Route::get('/{category}', 'TagController@categoryPage');
 
 Route::get('/contact/help-desk', 'PagesController@contact');
 Route::post('/contact/help-desk', 'PagesController@postContact');
+
+// Route::get('/home', 'HomeController@index')->name('home');
+
+
+// Auth::routes();
+
+// Route::get('/home', 'HomeController@index')->name('home');

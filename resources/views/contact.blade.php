@@ -3,7 +3,7 @@
 @section('content')
 
     <div class="row">
-        <img src="{{ asset('images/thebignews.jpg') }}" alt="thebignews" class="img-fluid">
+        <img src="{{ asset('images/thebignews.jpg') }}" alt="thebignews" class="banner img-fluid">
     </div>
 
     <div class="container mt-3">

@@ -4,6 +4,7 @@
 //@import "variables";
 // Bootstrap
 //@import "~bootstrap-sass/assets/stylesheets/bootstrap";
+@import "~bootstrap/scss/bootstrap";
 .banner {
     max-height: 470px;
 }
@@ -63,9 +64,9 @@ a {
 --------------------------------------------------------------*/
 
 body {
-    background: #fff;
+    // background: #fff;
     color: #444;
-    font-family: "Open Sans", sans-serif;
+    // font-family: "Open Sans", sans-serif;
 }
 
 a {
@@ -1262,6 +1263,3 @@ body.mobile-nav-active #mobile-nav-toggle {
     top: 0;
     width: 20px;
 }
-
-
-/*# sourceMappingURL=listnav.css.map */
