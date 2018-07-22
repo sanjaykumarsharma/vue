@@ -1,4 +1,3 @@
-
 window._ = require('lodash');
 
 window.Popper = require('popper.js/dist/umd/popper');
@@ -10,8 +9,10 @@ window.Popper = require('popper.js/dist/umd/popper');
  */
 
 try {
-    window.$ = window.jQuery = require('jquery/dist/jquery.slim');
-
+    window.$ = window.jQuery = require('jquery');
+    // window.$ = window.jQuery = require('jquery/dist/jquery.slim');
+    // window.Popper = Popper;
+    // require('bootstrap-sass');
     require('bootstrap');
 } catch (e) {}
 

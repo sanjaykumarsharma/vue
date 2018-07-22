@@ -31,11 +31,24 @@
 
         <nav id="nav-menu-container">
             <ul class="nav-menu">
-                <li class="menu-active"><a href="{!! url('/') !!}">Home</a></li>
-                <li><a href="{!! url('/category/blockchain'); !!}">Blockchain</a></li>
-                <li><a href="{!! url('/category/5g') !!}">Telecom</a></li>
-                <li><a href="{!! url('/category/business') !!}">Business</a></li>
-                <li><a href="{!! url('/tags/all') !!}">Tags</a></li>
+                <li class="{{ ( (URL::current()==url('/')) ? 'menu-active' : '') }}">
+                  <a href="{!! url('/') !!}">Home</a>
+                </li>
+                <li class="{{ ( (URL::current()==url('/category/blockchain')) ? 'menu-active' : '') }}">
+                  <a href="{!! url('/category/blockchain'); !!}">Blockchain</a>
+                </li>
+                <li class="{{ ( (URL::current()==url('/category/5g')) ? 'menu-active' : '') }}">
+                  <a href="{!! url('/category/5g') !!}">Telecom</a>
+                </li>
+                <li class="{{ ( (URL::current()==url('/category/business')) ? 'menu-active' : '') }}">
+                  <a href="{!! url('/category/business') !!}">Business</a>
+                </li>
+                <li class="{{ ( (URL::current()==url('/category/technology')) ? 'menu-active' : '') }}">
+                  <a href="{!! url('/category/technology') !!}">technology</a>
+                </li>
+                <li class="{{ ( (URL::current()==url('/tags/all')) ? 'menu-active' : '') }}">
+                  <a href="{!! url('/tags/all') !!}">Tags</a>
+                </li>
                 {{-- <li class="menu-has-children"><a href="">Drop Down</a>
                 <ul>
                     <li><a href="#">Drop Down 1</a></li>
@@ -44,7 +57,9 @@
                     <li><a href="#">Drop Down 5</a></li>
                 </ul>
                 </li> --}}
-                <li><a href="{!! url('/contact/help-desk') !!}">Contact</a></li>
+                <li class="{{ ( (URL::current()==url('/contact/help-desk')) ? 'menu-active' : '') }}">
+                  <a href="{!! url('/contact/help-desk') !!}">Contact</a>
+                </li>
             </ul>
         </nav><!-- #nav-menu-container -->
     </div>

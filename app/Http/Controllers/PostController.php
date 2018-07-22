@@ -100,6 +100,10 @@ class PostController extends Controller
         $items= $feed->get_items();
         $this->createFeed($items,'business');
 
+        $feed = Feeds::make(['https://www.techradar.com/rss']);
+        $items= $feed->get_items();
+        $this->createFeed($items,'technology');
+
 
 
         // $feed = Feeds::make(['http://www.abnewswire.com/pressreleases/feed']);
@@ -218,6 +222,10 @@ class PostController extends Controller
                     }else{
                         $img_link = '';
                     }
+                }
+
+                if($feed_category==''){
+                    $feed_category = $tag;
                 }
 
                 $c = Post::create([
