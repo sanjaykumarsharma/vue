@@ -10,6 +10,7 @@
 
         <link href="{{ asset('css/app.css') }}" rel="stylesheet">
         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
         <!-- Global Site Tag (gtag.js) - Google Analytics -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=UA-72535932-2"></script>
         <script>
@@ -35,7 +36,17 @@
                         @show
                     </div>
                     <div class="col-md-4">
-                        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                        {{-- in article adds --}}
+                        <ins class="adsbygoogle"
+                                style="display:block; text-align:center;"
+                                data-ad-layout="in-article"
+                                data-ad-format="fluid"
+                                data-ad-client="ca-pub-3935599736267366"
+                                data-ad-slot="2217676837"></ins>
+                        <script>
+                        (adsbygoogle = window.adsbygoogle || []).push({});
+                        </script>
+
                         <!-- thebignews-sidebar2-image-only -->
                         <ins class="adsbygoogle"
                                 style="display:block"
@@ -48,7 +59,7 @@
 
                         <div class="mt-1"></div>
 
-                        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                        {{-- <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script> --}}
                         <!-- thebignews-sidebar -->
                         <ins class="adsbygoogle"
                                 style="display:block"
@@ -61,7 +72,7 @@
 
                         <div class="mt-1"></div>
 
-                        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                        {{-- <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script> --}}
                         <!-- thebignews-sidebar-3 -->
                         <ins class="adsbygoogle"
                             style="display:block"
@@ -74,7 +85,7 @@
 
                         <div class="mt-1"></div>
 
-                        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                        {{-- <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script> --}}
                         <!-- thebignews-sidebar-4 -->
                         <ins class="adsbygoogle"
                             style="display:block"
@@ -87,29 +98,29 @@
 
                         <div class="mt-1"></div>
 
-                        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                        {{-- <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script> --}}
                         <!-- thebignews-sidebar-5 -->
-                        <ins class="adsbygoogle"
+                        {{-- <ins class="adsbygoogle"
                             style="display:block"
                             data-ad-client="ca-pub-3935599736267366"
                             data-ad-slot="1994295108"
                             data-ad-format="auto"></ins>
                         <script>
                         (adsbygoogle = window.adsbygoogle || []).push({});
-                        </script>
+                        </script> --}}
 
                         <div class="mt-1"></div>
 
-                        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                        {{-- <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script> --}}
                         <!-- thebignewsinfo-sidebar-6 -->
-                        <ins class="adsbygoogle"
+                        {{-- <ins class="adsbygoogle"
                             style="display:block"
                             data-ad-client="ca-pub-3935599736267366"
                             data-ad-slot="6956522332"
                             data-ad-format="auto"></ins>
                         <script>
                         (adsbygoogle = window.adsbygoogle || []).push({});
-                        </script>
+                        </script> --}}
                     </div>
                 </div>
             </div>

@@ -44,7 +44,7 @@
                   <a href="{!! url('/category/business') !!}">Business</a>
                 </li>
                 <li class="{{ ( (URL::current()==url('/category/technology')) ? 'menu-active' : '') }}">
-                  <a href="{!! url('/category/technology') !!}">technology</a>
+                  <a href="{!! url('/category/technology') !!}">Technology</a>
                 </li>
                 <li class="{{ ( (URL::current()==url('/tags/all')) ? 'menu-active' : '') }}">
                   <a href="{!! url('/tags/all') !!}">Tags</a>
