@@ -1,5 +1,9 @@
 @extends('layouts.app')
 
+@push('js')
+    <link href="{{ asset('css/list-nav.css') }}" rel="stylesheet">
+@endpush
+
 @section('banner')
     <div class="row">
         <img src="{{ asset('images/thebignews.jpg') }}" alt="thebignews" class="banner img-fluid">

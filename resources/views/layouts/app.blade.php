@@ -9,6 +9,9 @@
         {!! SEO::generate(true) !!}
 
         <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+
+        @stack('css')
+
         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
         <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
         <!-- Global Site Tag (gtag.js) - Google Analytics -->
@@ -35,7 +38,7 @@
 
                         @show
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-md-4 d-sm-none d-md-block">
                         {{-- in article adds --}}
                         <ins class="adsbygoogle"
                                 style="display:block; text-align:center;"
@@ -46,6 +49,8 @@
                         <script>
                         (adsbygoogle = window.adsbygoogle || []).push({});
                         </script>
+
+                        <div class="mt-1"></div>
 
                         <!-- thebignews-sidebar2-image-only -->
                         <ins class="adsbygoogle"
@@ -61,7 +66,7 @@
 
                         {{-- <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script> --}}
                         <!-- thebignews-sidebar -->
-                        <ins class="adsbygoogle"
+                        {{-- <ins class="adsbygoogle"
                                 style="display:block"
                                 data-ad-client="ca-pub-3935599736267366"
                                 data-ad-slot="5491930252"
@@ -70,11 +75,11 @@
                         (adsbygoogle = window.adsbygoogle || []).push({});
                         </script>
 
-                        <div class="mt-1"></div>
+                        <div class="mt-1"></div> --}}
 
                         {{-- <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script> --}}
                         <!-- thebignews-sidebar-3 -->
-                        <ins class="adsbygoogle"
+                        {{-- <ins class="adsbygoogle"
                             style="display:block"
                             data-ad-client="ca-pub-3935599736267366"
                             data-ad-slot="6167960943"
@@ -83,11 +88,11 @@
                         (adsbygoogle = window.adsbygoogle || []).push({});
                         </script>
 
-                        <div class="mt-1"></div>
+                        <div class="mt-1"></div> --}}
 
                         {{-- <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script> --}}
                         <!-- thebignews-sidebar-4 -->
-                        <ins class="adsbygoogle"
+                        {{-- <ins class="adsbygoogle"
                             style="display:block"
                             data-ad-client="ca-pub-3935599736267366"
                             data-ad-slot="6523184161"
@@ -96,7 +101,7 @@
                         (adsbygoogle = window.adsbygoogle || []).push({});
                         </script>
 
-                        <div class="mt-1"></div>
+                        <div class="mt-1"></div> --}}
 
                         {{-- <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script> --}}
                         <!-- thebignews-sidebar-5 -->

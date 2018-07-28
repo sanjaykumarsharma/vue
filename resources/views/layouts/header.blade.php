@@ -4,7 +4,7 @@
   <section id="topbar" class="d-none d-lg-block">
     <div class="container clearfix">
       <div class="contact-info float-left">
-        <i class="fa fa-envelope-o"></i> <a href="mailto:contact@thebignews.com">contact@thebignews.com</a>
+        <i class="fa fa-envelope-o"></i> <a href="mailto:ask@thebignews.info">ask@thebignews.info</a>
         {{-- <i class="fa fa-phone"></i> +1 5589 55488 55 --}}
       </div>
       <div class="social-links float-right">

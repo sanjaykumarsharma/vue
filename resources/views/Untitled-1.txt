@@ -13,7 +13,7 @@
 
         @foreach ($feeds as $feed)
 
-            <div class="col-md-6 col-lg-6 col-xl-6 thumbnail p-3">
+            <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6 thumbnail p-3">
                         <a href="{!! url($feed->slug); !!}">
                             <div class="row">
                                 <div class="col-3">
@@ -41,22 +41,9 @@
                         @endforeach
                     </h5>
             </div>
-
-            @if ( ($loop->index+1) % 4 == 0)
-                <div class="col-md-6 col-lg-6 col-xl-6 thumbnail p-3">
-                    <!-- thebignews-sidebar2-image-only -->
-                    <ins class="adsbygoogle"
-                    style="display:block"
-                    data-ad-client="ca-pub-3935599736267366"
-                    data-ad-slot="2576749030"
-                    data-ad-format="auto"></ins>
-                    <script>
-                    (adsbygoogle = window.adsbygoogle || []).push({});
-                    </script>
-                </div>
+            @if ( ($loop->index+1) % 2 == 0)
+                </div><div class="row"> {{-- closing open div --}}
             @endif
-
-
 
         @endforeach
     </div>
