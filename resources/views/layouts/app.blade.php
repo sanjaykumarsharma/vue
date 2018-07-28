@@ -8,11 +8,13 @@
 
         {!! SEO::generate(true) !!}
 
+        {{-- <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet"> --}}
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
         <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 
         @stack('css')
 
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
         <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
         <!-- Global Site Tag (gtag.js) - Google Analytics -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=UA-72535932-2"></script>
@@ -25,6 +27,23 @@
         </script>
     </head>
     <body id="body">
+
+        {{-- <noscript id="deferred-styles">
+            <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+        </noscript>
+        <script>
+        var loadDeferredStyles = function() {
+            var addStylesNode = document.getElementById("deferred-styles");
+            var replacement = document.createElement("div");
+            replacement.innerHTML = addStylesNode.textContent;
+            document.body.appendChild(replacement)
+            addStylesNode.parentElement.removeChild(addStylesNode);
+        };
+        var raf = window.requestAnimationFrame || window.mozRequestAnimationFrame ||
+            window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
+        if (raf) raf(function() { window.setTimeout(loadDeferredStyles, 0); });
+        else window.addEventListener('load', loadDeferredStyles);
+        </script> --}}
 
         @include('layouts.header')
 
@@ -141,9 +160,9 @@
         <div class="back-to-top" ><i class="fa fa-chevron-up"></i></div>
         <script src="{{ asset('js/app.js') }}"></script>
         <script src="{{ asset('js/superfish/superfish.min.js') }}"></script>
-        <script src="{{ asset('js/sticky/sticky.js') }}"></script>
+        <script src="{{ asset('js/sticky/sticky.min.js') }}"></script>
         <script src="{{ asset('js/wow/wow.min.js') }}"></script>
-        <script src="{{ asset('js/main.js') }}"></script>
+        <script src="{{ asset('js/main.min.js') }}"></script>
 
         @stack('js')
     </body>
