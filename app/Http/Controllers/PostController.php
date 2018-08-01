@@ -87,6 +87,25 @@ class PostController extends Controller
         '']);
         */
 
+        // id= 14250;
+
+
+        //  $feeds = DB::table('posts')
+        //         ->orderBy('id')
+        //         ->offset(1000)
+        //         ->limit(200)
+        //         ->get();
+
+        // foreach($feeds as $feed){
+        //     echo $feed->id; echo '<br>'; echo $feed->image; echo '<br>';
+        //     if(strlen($feed->image)>0){
+        //         if (false === ($data = @file_get_contents($feed->image))) {
+        //         } else {
+        //             $content = file_get_contents($feed->image);
+        //             file_put_contents("images/post-image/".$feed->slug.".jpg", $content);
+        //         }
+        //     }
+        // }
 
         $feed = Feeds::make(['https://cointelegraph.com/feed']);
         $items= $feed->get_items();
@@ -106,9 +125,9 @@ class PostController extends Controller
 
 
 
-        // $feed = Feeds::make(['http://www.abnewswire.com/pressreleases/feed']);
-        // $items= $feed->get_items();
-        // $this->createFeed($items,'business');
+        $feed = Feeds::make(['http://www.abnewswire.com/pressreleases/feed']);
+        $items= $feed->get_items();
+        $this->createFeed($items,'business');
 
 
 
@@ -240,6 +259,23 @@ class PostController extends Controller
                     'image' => $img_link,
                     'tag' => $tag,
                 ]);
+
+                // if(strlen($img_link)>0){
+
+                //     if(file_get_contents($img_link)){
+                //         $content = file_get_contents($img_link);
+                //         file_put_contents("images/post-image/".$slug_text.".jpg", $content);
+                //     }
+                // }
+
+                if(strlen($img_link)>0){
+                    if (false === ($data = @file_get_contents($img_link))) {
+                    } else {
+                        $content = file_get_contents($img_link);
+                        file_put_contents("images/post-image/".$slug_text.".jpg", $content);
+                    }
+                }
+
             }
 
         }

@@ -17,10 +17,9 @@
                         <div class="row">
                             <div class="col-3">
                                 @if(strlen($feed->image)>0)
-                                    {{-- <img class="feed-img img-fluid" src="{{$feed->image}}" alt="thebignews"> --}}
-                                    <img class="lazy img-fluid feed-img" src="images/tbn.jpg" data-src="{{$feed->image}}" data-srcset="{{$feed->image}}" alt="thebignews">
+                                    <img class="lazy img-fluid feed-img" src="{{asset('images/tbn.jpg')}}" data-src="{{asset('images/post-image/'.$feed->slug.'.jpg')}}" data-srcset="{{asset('images/post-image/'.$feed->slug.'.jpg')}}" alt="thebignews">
                                 @else
-                                    <img src="images/tbn.jpg" alt="thebignews" class="feed-img img-fluid">
+                                    <img src="{{asset('images/tbn.jpg')}}" alt="thebignews" class="feed-img img-fluid">
                                 @endif
                             </div>
                                 <div class="col-9"><p class="title">{{ $feed->title }}</p></div>
