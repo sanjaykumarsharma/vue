@@ -16,7 +16,7 @@
             <div class="col-md-6 col-lg-6 col-xl-6 thumbnail p-3">
                         <a href="{!! url($feed->slug); !!}">
                             <div class="row">
-                                <div class="col-3">
+                                <div class="col-3 p-0">
                                     @if(strlen($feed->image)>0)
                                         <img class="lazy img-fluid feed-img" src="{{asset('images/tbn.jpg')}}" data-src="{{asset('images/post-image/'.$feed->slug.'.jpg')}}" data-srcset="{{asset('images/post-image/'.$feed->slug.'.jpg')}}" alt="thebignews">
                                     @else

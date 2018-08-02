@@ -8,11 +8,8 @@
 
         {!! SEO::generate(true) !!}
 
-        {{-- <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet"> --}}
-        {{-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/css/bootstrap.min.css"  crossorigin="anonymous"> --}}
-        {{-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"> --}}
         <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+        {{-- <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"> --}}
 
         @stack('css')
 
@@ -29,23 +26,6 @@
     </head>
     <body id="body">
 
-        {{-- <noscript id="deferred-styles">
-            <link href="{{ asset('css/mobile-nav.min.css') }}" rel="stylesheet">
-        </noscript>
-        <script type="text/javascript">
-        var loadDeferredStyles = function() {
-            var addStylesNode = document.getElementById("deferred-styles");
-            var replacement = document.createElement("div");
-            replacement.innerHTML = addStylesNode.textContent;
-            document.body.appendChild(replacement)
-            addStylesNode.parentElement.removeChild(addStylesNode);
-        };
-        var raf = window.requestAnimationFrame || window.mozRequestAnimationFrame ||
-            window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
-        if (raf) raf(function() { window.setTimeout(loadDeferredStyles, 0); });
-        else window.addEventListener('load', loadDeferredStyles);
-        </script> --}}
-
         @include('layouts.header')
 
         <div class="container-fluid" style="background-color:#FFF">
@@ -58,7 +38,7 @@
 
                         @show
                     </div>
-                    <div class="col-md-4 d-sm-none d-md-block">
+                    <div class="col-md-4">
                         {{-- in article adds --}}
                         <ins class="adsbygoogle"
                                 style="display:block; text-align:center;"
@@ -84,68 +64,6 @@
 
                         <div class="mt-1"></div>
 
-                        {{-- <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script> --}}
-                        <!-- thebignews-sidebar -->
-                        {{-- <ins class="adsbygoogle"
-                                style="display:block"
-                                data-ad-client="ca-pub-3935599736267366"
-                                data-ad-slot="5491930252"
-                                data-ad-format="auto"></ins>
-                        <script>
-                        (adsbygoogle = window.adsbygoogle || []).push({});
-                        </script>
-
-                        <div class="mt-1"></div> --}}
-
-                        {{-- <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script> --}}
-                        <!-- thebignews-sidebar-3 -->
-                        {{-- <ins class="adsbygoogle"
-                            style="display:block"
-                            data-ad-client="ca-pub-3935599736267366"
-                            data-ad-slot="6167960943"
-                            data-ad-format="auto"></ins>
-                        <script>
-                        (adsbygoogle = window.adsbygoogle || []).push({});
-                        </script>
-
-                        <div class="mt-1"></div> --}}
-
-                        {{-- <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script> --}}
-                        <!-- thebignews-sidebar-4 -->
-                        {{-- <ins class="adsbygoogle"
-                            style="display:block"
-                            data-ad-client="ca-pub-3935599736267366"
-                            data-ad-slot="6523184161"
-                            data-ad-format="auto"></ins>
-                        <script>
-                        (adsbygoogle = window.adsbygoogle || []).push({});
-                        </script>
-
-                        <div class="mt-1"></div> --}}
-
-                        {{-- <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script> --}}
-                        <!-- thebignews-sidebar-5 -->
-                        {{-- <ins class="adsbygoogle"
-                            style="display:block"
-                            data-ad-client="ca-pub-3935599736267366"
-                            data-ad-slot="1994295108"
-                            data-ad-format="auto"></ins>
-                        <script>
-                        (adsbygoogle = window.adsbygoogle || []).push({});
-                        </script> --}}
-
-                        <div class="mt-1"></div>
-
-                        {{-- <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script> --}}
-                        <!-- thebignewsinfo-sidebar-6 -->
-                        {{-- <ins class="adsbygoogle"
-                            style="display:block"
-                            data-ad-client="ca-pub-3935599736267366"
-                            data-ad-slot="6956522332"
-                            data-ad-format="auto"></ins>
-                        <script>
-                        (adsbygoogle = window.adsbygoogle || []).push({});
-                        </script> --}}
                     </div>
                 </div>
             </div>
