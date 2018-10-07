@@ -19,15 +19,15 @@ class PostController extends Controller
     public function index()
     {
         SEOMeta::setTitle('The Big News');
-        SEOMeta::setDescription('This is my page description');
+        SEOMeta::setDescription('The Big News');
         SEOMeta::setCanonical('www.thebignews.info');
 
-        OpenGraph::setDescription('This is my page description');
+        OpenGraph::setDescription('The Big News');
         OpenGraph::setTitle('The Big News');
         OpenGraph::setUrl('www.thebignews.info');
         OpenGraph::addProperty('type', 'articles');
 
-        Twitter::setTitle('Homepage');
+        Twitter::setTitle('The Big News');
         Twitter::setSite('@LuizVinicius73');
 
         $feeds = DB::table('posts')->orderBy('id', 'desc')->paginate(10);
@@ -40,14 +40,14 @@ class PostController extends Controller
 
         if ($feed != null) {
 
-            SEOMeta::setTitle($feed->title);
-            SEOMeta::setDescription(substr($feed->description,0,300));
+            SEOMeta::setTitle($feed->title.' | The Big News');
+            SEOMeta::setDescription(substr($feed->description,0,250));
             SEOMeta::addMeta('article:published_time', $feed->pub_date, 'property');
             SEOMeta::addMeta('article:section', $feed->slug, 'property');
             //SEOMeta::addKeyword(['key1', 'key2', 'key3']);
 
-            OpenGraph::setDescription(substr($feed->description,0,300));
-            OpenGraph::setTitle($feed->title);
+            OpenGraph::setDescription(substr($feed->description,0,250));
+            OpenGraph::setTitle($feed->title.' | The Big News');
             OpenGraph::setUrl('http://thebignews.info');
             OpenGraph::addProperty('type', 'article');
             OpenGraph::addProperty('locale', 'pt-br');

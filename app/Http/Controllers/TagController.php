@@ -25,15 +25,15 @@ class TagController extends Controller
         }
 
         SEOMeta::setTitle('The Big News');
-        SEOMeta::setDescription('This is my page description');
+        SEOMeta::setDescription('The Big News');
         SEOMeta::setCanonical('www.thebignews.info');
 
-        OpenGraph::setDescription('This is my page description');
+        OpenGraph::setDescription('The Big News');
         OpenGraph::setTitle('The Big News');
         OpenGraph::setUrl('www.thebignews.info');
         OpenGraph::addProperty('type', 'articles');
 
-        Twitter::setTitle('Homepage');
+        Twitter::setTitle('The Big News');
         Twitter::setSite('@LuizVinicius73');
 
         $feeds = DB::table('posts')->where('category', 'like', '%'.$tag.'%')->orderBy('id', 'desc')->paginate(10);
@@ -53,15 +53,15 @@ class TagController extends Controller
         }
 
         SEOMeta::setTitle('The Big News');
-        SEOMeta::setDescription('This is my page description');
+        SEOMeta::setDescription('The Big News');
         SEOMeta::setCanonical('www.thebignews.info');
 
-        OpenGraph::setDescription('This is my page description');
+        OpenGraph::setDescription('The Big News');
         OpenGraph::setTitle('The Big News');
         OpenGraph::setUrl('www.thebignews.info');
         OpenGraph::addProperty('type', 'articles');
 
-        Twitter::setTitle('Homepage');
+        Twitter::setTitle('The Big News');
         Twitter::setSite('@LuizVinicius73');
 
         $feeds = DB::table('posts')->where('tag', '=', $tag)->orderBy('id', 'desc')->paginate(10);
@@ -80,15 +80,15 @@ class TagController extends Controller
 
     public function tagsPage(){
         SEOMeta::setTitle('The Big News');
-        SEOMeta::setDescription('This is my page description');
+        SEOMeta::setDescription('The Big News');
         SEOMeta::setCanonical('www.thebignews.info');
 
-        OpenGraph::setDescription('This is my page description');
+        OpenGraph::setDescription('The Big News');
         OpenGraph::setTitle('The Big News');
         OpenGraph::setUrl('www.thebignews.info');
         OpenGraph::addProperty('type', 'articles');
 
-        Twitter::setTitle('Homepage');
+        Twitter::setTitle('The Big News');
         Twitter::setSite('@LuizVinicius73');
 
         $tags = Tag::all();
